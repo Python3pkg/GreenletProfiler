@@ -81,7 +81,7 @@ def main():
             exec (compile(open(args[0]).read(), args[0], 'exec'),
                   sys._getframe(1).f_globals, sys._getframe(1).f_locals)
         else:
-            execfile(args[0], sys._getframe(1).f_globals,
+            exec(compile(open(args[0]).read(), args[0], 'exec'), sys._getframe(1).f_globals,
                      sys._getframe(1).f_locals)
         stop()
         get_func_stats().print_all()

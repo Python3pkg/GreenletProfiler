@@ -84,7 +84,7 @@ setup(
     author_email='jesse@emptysquare.net',
     url='http://github.com/ajdavis/GreenletProfiler/',
     license='http://www.apache.org/licenses/LICENSE-2.0',
-    classifiers=filter(None, classifiers.split('\n')),
+    classifiers=[_f for _f in classifiers.split('\n') if _f],
     keywords='greenlet gevent profiler asynchronous',
     install_requires=['greenlet'],
     # use python setup.py nosetests to test
